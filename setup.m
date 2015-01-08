@@ -12,6 +12,6 @@ nlms_mu = 0.002;
 a = 1;
 [e_nlms, w_nlms] = nlms(nlms_mu, M, u, d, a);
 
-leaky_mu = 0.02;
+leaky_mu = 0.002;
 alpha = 0.99;
 [e_leaky, w_leaky] = leaky_lms(lms_mu, alpha, M, u, d);
