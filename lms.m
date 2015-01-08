@@ -16,7 +16,7 @@ function [e,w]=lms(mu,M,u,d);
 w=zeros(M,1);
 
 %length of input signal
-N=length(u);
+N=length(d);
 
 %make sure that u and d are colon vectors
 u=u(:);

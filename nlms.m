@@ -17,7 +17,7 @@ function [e,w]=nlms(mu,M,u,d,a);
 w=zeros(M,1);
 
 %input signal length
-N=length(u);
+N=length(d);
 
 %make sure that u and d are colon vectors
 u=u(:);
@@ -29,3 +29,4 @@ for n=M:N
    e(n)=d(n)-w'*uvec;  
    w=w+mu/(a+uvec'*uvec)*uvec*conj(e(n));
 end
+e = e';
